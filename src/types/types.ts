@@ -66,3 +66,18 @@ type HopType = {
   add: string;
   attribute: string;
 };
+
+export type BeerType = {
+  id: number;
+  name: string;
+  tagline: string;
+  description: string;
+  abv: number;
+  ibu: number;
+  ingredients: {
+    malt: MaltType[];
+    hops: HopType[];
+    yeast: string;
+  };
+  imageUrl: string;
+};
