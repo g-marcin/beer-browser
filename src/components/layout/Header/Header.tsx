@@ -1,4 +1,4 @@
-import { FC, useState } from "react";
+import { FC } from "react";
 import { Menu } from "react-feather";
 import { Link } from "react-router-dom";
 import styles from "./header.module.css";
