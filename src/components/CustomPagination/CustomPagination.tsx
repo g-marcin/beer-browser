@@ -10,7 +10,7 @@ type customPaginationProps = {
 
 export const CustomPagination: FC<customPaginationProps> = ({ page, setPageHandler }) => {
   const items = [];
-  for (let number = 1; number <= 10; number++) {
+  for (let number = 1; number <= 3; number++) {
     items.push(
       <Pagination.Item
         onClick={() => {

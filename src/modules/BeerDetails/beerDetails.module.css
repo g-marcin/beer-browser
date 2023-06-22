@@ -1,0 +1,25 @@
+.beerCard {
+}
+
+.beerCard:hover {
+  border: 1px solid rgb(238, 255, 0);
+  cursor: pointer;
+}
+
+.cardImage {
+  height: 30vh;
+  object-fit: contain;
+  object-position: 50% 0;
+  margin: 5px;
+}
+
+.cardBody {
+  text-align: center;
+  vertical-align: middle;
+}
+
+.detailsContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
