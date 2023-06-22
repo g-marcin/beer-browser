@@ -10,7 +10,7 @@ export const Loader: FC = () => {
 
   return (
     <div className={styles.animationContainer}>
-      {isTimeout ? <div>No description available</div> : <LoaderIcon className={styles.rotate} size={64} />}
+      {isTimeout ? <div>No data available</div> : <LoaderIcon className={styles.rotate} size={64} />}
     </div>
   );
 };
