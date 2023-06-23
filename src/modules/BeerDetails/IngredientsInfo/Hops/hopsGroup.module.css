@@ -1,0 +1,14 @@
+.ingredient {
+  display: flex;
+  gap: 5px;
+  justify-content: space-between;
+  margin: 0 1vw;
+}
+
+.categoryHeader {
+  font-size: 18px;
+  display: flex;
+  background: #8080804b;
+  height: 25px;
+  margin: 5px;
+}
