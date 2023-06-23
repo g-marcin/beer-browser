@@ -1,0 +1,65 @@
+.ingredient {
+  display: flex;
+  gap: 5px;
+  justify-content: space-between;
+  margin: 0 1vw;
+}
+
+@media (max-width: 780px) {
+}
+@media (max-width: 600px) {
+  .detailsImage {
+    flex: none;
+  }
+  .beerCard {
+    flex-direction: column;
+  }
+  .cardImage {
+    height: 10vh;
+  }
+}
+
+.label {
+  display: flex;
+  justify-content: space-around;
+}
+
+.header {
+  font-size: 42px;
+  padding-bottom: 25px;
+}
+
+.subHeader {
+  font-size: 24px;
+  padding-bottom: 10px;
+  font-weight: bold;
+  background: #000000;
+  vertical-align: middle;
+  padding: 5px;
+}
+
+.categoryHeader {
+  font-size: 18px;
+  display: flex;
+  background: rgba(128, 128, 128, 0.295);
+  height: 25px;
+  margin: 5px;
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+  padding: 0;
+}
+
+.number-values-Wrapper {
+  gap: 100px;
+}
+
+.number-value {
+  display: flex;
+  justify-content: space-between;
+  font-size: 16px;
+  font-weight: bold;
+}

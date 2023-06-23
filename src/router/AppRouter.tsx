@@ -3,6 +3,7 @@ import { createBrowserRouter } from "react-router-dom";
 import { ErrorPage } from "./ErrorPage";
 import { Layout, Loader } from "../components";
 import { BeerBrowser } from "../modules";
+import { BeerDetails } from "../modules/BeerDetails/BeerDetails";
 
 export const AppRouter = createBrowserRouter([
   {
@@ -15,6 +16,14 @@ export const AppRouter = createBrowserRouter([
         element: (
           <Suspense fallback={<Loader />}>
             <BeerBrowser />
+          </Suspense>
+        ),
+      },
+      {
+        path: "/details/:id",
+        element: (
+          <Suspense fallback={<Loader />}>
+            <BeerDetails />
           </Suspense>
         ),
       },

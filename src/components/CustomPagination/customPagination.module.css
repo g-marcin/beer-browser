@@ -1,10 +1,4 @@
-.pagination {
+.paginationWrapper {
   display: flex;
   justify-content: center;
-}
-
-@media (max-width: 660px) {
-  .pagination {
-    justify-content: start;
-  }
 }

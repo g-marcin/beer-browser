@@ -57,7 +57,7 @@ type MaltType = {
   };
 };
 
-type HopType = {
+export type HopType = {
   name: string;
   amount: {
     value: number;

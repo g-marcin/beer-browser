@@ -8,9 +8,9 @@ import { beerDataMapper } from "./beerDataMapper";
 import { BeerType } from "../../types";
 import { CustomPagination } from "../../components/CustomPagination";
 import { Loader } from "../../components";
+
 export const BeerBrowser: FC = () => {
   const [isLoading, setIsLoading] = useState(false);
-
   const [page, setPage] = useState(1);
   const setPageHandler = (page: number) => {
     setPage(page);
@@ -29,17 +29,17 @@ export const BeerBrowser: FC = () => {
 
   return (
     <>
-      {!isLoading ? (
+      {isLoading ? (
+        <Loader />
+      ) : (
         <div>
           <Container className={styles.beerCardsContainer}>
             {beerData?.map((beer) => {
-              return <BeerCard name={beer.name} tagline={beer.tagline} image={beer.imageUrl} key={beer.id} />;
+              return <BeerCard name={beer.name} tagline={beer.tagline} image={beer.imageUrl} id={beer.id} key={beer.id} />;
             })}
           </Container>
           <CustomPagination page={page} setPageHandler={setPageHandler} />
         </div>
-      ) : (
-        <Loader />
       )}
     </>
   );
