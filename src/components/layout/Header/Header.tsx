@@ -1,8 +1,8 @@
-import { FC } from "react";
-import { Menu } from "react-feather";
-import { Link } from "react-router-dom";
-import styles from "./header.module.css";
-import beerIcon from "../../../assets/beer-icon.svg";
+import { FC } from 'react';
+import { Menu } from 'react-feather';
+import { Link } from 'react-router-dom';
+import styles from './header.module.css';
+import beerIcon from '../../../assets/beer-icon.svg';
 
 export const Header: FC = () => {
   return (

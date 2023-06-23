@@ -29,7 +29,7 @@ export type beerDataDTO = {
           unit: string;
         };
         duration: number;
-      }
+      },
     ];
     fermentation: {
       temp: {

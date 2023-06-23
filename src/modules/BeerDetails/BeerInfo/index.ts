@@ -1,1 +1,1 @@
-export * from "./BeerInfo";
+export * from './BeerInfo';

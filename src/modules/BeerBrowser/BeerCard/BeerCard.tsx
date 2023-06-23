@@ -1,7 +1,7 @@
-import { FC } from "react";
-import { Card } from "react-bootstrap";
-import styles from "./beerCard.module.css";
-import { useNavigate } from "react-router-dom";
+import { FC } from 'react';
+import { Card } from 'react-bootstrap';
+import styles from './beerCard.module.css';
+import { useNavigate } from 'react-router-dom';
 
 type BeerCardProps = {
   image?: string;
@@ -11,9 +11,9 @@ type BeerCardProps = {
 };
 
 export const BeerCard: FC<BeerCardProps> = ({
-  image = "https://picsum.photos/100/100",
-  name = "beer name",
-  tagline = "beer tagline",
+  image = 'https://picsum.photos/100/100',
+  name = 'beer name',
+  tagline = 'beer tagline',
   id,
 }) => {
   const navigate = useNavigate();

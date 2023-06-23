@@ -1,4 +1,4 @@
-import { BeerType, beerDataDTO } from "../../types";
+import { BeerType, beerDataDTO } from '../../types';
 
 export const beerDataMapper = (beerDataDTO: beerDataDTO[]) => {
   const beerCollection: BeerType[] = beerDataDTO.map((beerData) => {
