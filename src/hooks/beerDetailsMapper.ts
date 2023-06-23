@@ -1,18 +1,18 @@
-import { BeerType, beerDataDTO } from "../types";
+import { beerDataDTO } from "../types";
 
 export const beerDetailsMapper = (beerDataDTO: beerDataDTO[]) => {
-  const beerDetails: BeerType[] = [];
-  beerDataDTO.map((beer) => {
-    beerDetails.push({
-      id: beer.id,
-      name: beer.name,
-      tagline: beer.tagline,
-      description: beer.description,
-      abv: beer.abv,
-      ibu: beer.ibu,
-      ingredients: beer.ingredients,
-      imageUrl: beer.image_url,
-    });
-  });
-  return beerDetails[0];
+  return beerObjectMapper(beerDataDTO[0]);
+};
+
+const beerObjectMapper = (beerDataDTO: beerDataDTO) => {
+  return {
+    id: beerDataDTO.id,
+    name: beerDataDTO.name,
+    tagline: beerDataDTO.tagline,
+    description: beerDataDTO.description,
+    abv: beerDataDTO.abv,
+    ibu: beerDataDTO.ibu,
+    ingredients: beerDataDTO.ingredients,
+    imageUrl: beerDataDTO.image_url,
+  };
 };
