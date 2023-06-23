@@ -7,7 +7,7 @@ import { BeerInfo } from './BeerInfo';
 import { IngredientsInfo } from './IngredientsInfo';
 import styles from './beerDetails.module.css';
 
-export const BeerDetails: FC = () => {
+const BeerDetails: FC = () => {
   const { id } = useParams();
   const { beerDetails, isLoading } = useBeerDetails(id);
 
@@ -29,3 +29,5 @@ export const BeerDetails: FC = () => {
     </div>
   );
 };
+
+export default BeerDetails

@@ -9,7 +9,7 @@ import { BeerCard } from './BeerCard';
 import styles from './beerBrowser.module.css';
 import { beerDataMapper } from './beerDataMapper';
 
-export const BeerBrowser: FC = () => {
+ const BeerBrowser: FC = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [page, setPage] = useState(1);
   const setPageHandler = (page: number) => {
@@ -49,3 +49,5 @@ export const BeerBrowser: FC = () => {
     </>
   );
 };
+
+export default BeerBrowser
