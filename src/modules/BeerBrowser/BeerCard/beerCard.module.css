@@ -5,8 +5,9 @@
 }
 
 .beerCard:hover {
-  border: 1px solid #f7d40a88;
+  border: 1px solid #e6b70e;
   cursor: pointer;
+  box-shadow: #e6b70ed8 0px 5px 15px;
 }
 
 .cardImage {

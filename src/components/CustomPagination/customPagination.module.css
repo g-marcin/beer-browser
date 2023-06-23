@@ -2,3 +2,7 @@
   display: flex;
   justify-content: center;
 }
+.page-link.active,
+.active > .page-link {
+  background: #e6b70e;
+}
