@@ -2,7 +2,3 @@
   display: flex;
   justify-content: center;
 }
-
-.pagination {
-  --bs-pagination-active-bg: rgb(114, 114, 101) !important;
-}

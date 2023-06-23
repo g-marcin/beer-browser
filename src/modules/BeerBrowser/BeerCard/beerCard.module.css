@@ -1,10 +1,11 @@
 .beerCard {
-  width: 300px;
+  width: 350px;
   height: 300px;
+  padding: 20px;
 }
 
 .beerCard:hover {
-  border: 1px solid rgb(238, 255, 0);
+  border: 1px solid #f7d40a88;
   cursor: pointer;
 }
 

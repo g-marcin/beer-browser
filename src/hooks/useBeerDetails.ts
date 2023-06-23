@@ -7,6 +7,7 @@ import { beerDetailsMapper } from "./beerDetailsMapper";
 export const useBeerDetails = (id = "1") => {
   const [beerDetails, setBeerDetails] = useState<BeerType>();
   const [isLoading, setIsLoading] = useState(false);
+
   useEffect(() => {
     setIsLoading(true);
     httpClient
@@ -17,7 +18,7 @@ export const useBeerDetails = (id = "1") => {
         }
       })
       .then(() => setIsLoading(false));
-    console.log(beerDetails);
+
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   return { beerDetails: beerDetails, isLoading: isLoading };
