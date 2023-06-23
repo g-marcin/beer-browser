@@ -1,6 +1,6 @@
-import { FC } from "react";
-import { HopType } from "../../../../types";
-import styles from "./hopsGroup.module.css";
+import { FC } from 'react';
+import { HopType } from '../../../../types';
+import styles from './hopsGroup.module.css';
 
 type HopsGroupProps = {
   title: string;

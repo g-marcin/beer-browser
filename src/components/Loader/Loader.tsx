@@ -1,6 +1,6 @@
-import { FC, useEffect, useState } from "react";
-import { Loader as LoaderIcon } from "react-feather";
-import styles from "./loader.module.css";
+import { FC, useEffect, useState } from 'react';
+import { Loader as LoaderIcon } from 'react-feather';
+import styles from './loader.module.css';
 
 export const Loader: FC = () => {
   const [isTimeout, setIsTimeout] = useState(false);

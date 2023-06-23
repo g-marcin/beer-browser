@@ -1,6 +1,6 @@
-import { FC } from "react";
-import styles from "./customPagination.module.css";
-import Pagination from "react-bootstrap/Pagination";
+import { FC } from 'react';
+import styles from './customPagination.module.css';
+import Pagination from 'react-bootstrap/Pagination';
 
 type customPaginationProps = {
   page: number;
@@ -21,7 +21,7 @@ export const CustomPagination: FC<customPaginationProps> = ({ page, setPageHandl
         className={styles.paginationItem}
       >
         {number + 1}
-      </Pagination.Item>
+      </Pagination.Item>,
     );
   });
   items.unshift(
@@ -32,10 +32,10 @@ export const CustomPagination: FC<customPaginationProps> = ({ page, setPageHandl
         }
         setPageHandler(page - 1);
       }}
-      key={"previous"}
+      key={'previous'}
     >
-      {"<"}
-    </Pagination.Item>
+      {'<'}
+    </Pagination.Item>,
   );
   items.push(
     <Pagination.Item
@@ -45,10 +45,10 @@ export const CustomPagination: FC<customPaginationProps> = ({ page, setPageHandl
         }
         setPageHandler(page + 1);
       }}
-      key={"next"}
+      key={'next'}
     >
-      {">"}
-    </Pagination.Item>
+      {'>'}
+    </Pagination.Item>,
   );
   return (
     <div className={styles.paginationWrapper}>
