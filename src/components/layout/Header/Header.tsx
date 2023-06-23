@@ -12,8 +12,8 @@ export const Header: FC = () => {
           <img src={beerIcon} alt="logo" className={styles.logoImage} />
           <span className="text-decoration-none">beer-browser</span>
         </Link>
-        <button>
-          <Menu className={styles.menu} />
+        <button className={styles.menuButton}>
+          <Menu className={styles.menu} color="#ffffff" />
         </button>
       </header>
     </>
