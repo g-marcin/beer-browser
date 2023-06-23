@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 import { httpClient } from "../common";
 import { AxiosResponse } from "axios";
 import { BeerType } from "../types";
-import { useParams } from "react-router-dom";
 import { beerDetailsMapper } from "./beerDetailsMapper";
 
 export const useBeerDetails = (id = "1") => {
@@ -19,6 +18,7 @@ export const useBeerDetails = (id = "1") => {
       })
       .then(() => setIsLoading(false));
     console.log(beerDetails);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   return { beerDetails: beerDetails, isLoading: isLoading };
 };
