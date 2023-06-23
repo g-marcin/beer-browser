@@ -1,7 +1,7 @@
 import { FC } from 'react';
 import { Card } from 'react-bootstrap';
-import styles from './beerCard.module.css';
 import { useNavigate } from 'react-router-dom';
+import styles from './beerCard.module.css';
 
 type BeerCardProps = {
   image?: string;

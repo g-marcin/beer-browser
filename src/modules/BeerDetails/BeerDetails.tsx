@@ -16,17 +16,17 @@ const BeerDetails: FC = () => {
   }
 
   return (
-    <div className={`${styles.wrapper} `}>
-      {isLoading ? (
-        <Loader />
+    <>
+    {isLoading ? (
+      <Loader />
       ) : (
-        <>
+        <div className={`${styles.wrapper} `}>
           <BeerInfo beerDetails={beerDetails} />
           <Card.Img variant="top" src={beerDetails?.imageUrl} className={styles.detailsImage} />
           <IngredientsInfo beerDetails={beerDetails} />
-        </>
+        </div>
       )}
-    </div>
+      </>
   );
 };
 
