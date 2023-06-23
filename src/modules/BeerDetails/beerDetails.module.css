@@ -1,11 +1,13 @@
 .wrapper {
   display: flex;
-  align-self: center;
-  justify-self: center;
+  align-content: space-between;
+  margin: 10px;
+  gap: 100px;
 }
 @media (max-width: 780px) {
   .wrapper {
     flex-direction: column;
+    gap: 10px;
   }
 }
 @media (max-width: 1250px) {
@@ -15,32 +17,27 @@
 }
 
 .detailsImage {
-  height: 60vh;
+  max-height: 60vh;
   object-fit: contain;
   object-position: 50% 0;
   margin: 5px;
-  align-self: center;
+  align-self: flex-end;
   flex: 1;
 }
-
-.cardBody {
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  flex: 1;
+@media (max-width: 1250px) {
+  .wrapper {
+    flex-direction: column;
+  }
+  .detailsImage {
+    height: 40vh;
+  }
 }
 
 .ingredient {
   display: flex;
   gap: 5px;
   justify-content: space-between;
-}
-div.ingredient {
-  padding: 5px;
-}
-
-.beerCard {
-  flex-direction: row;
+  margin: 0 1vw;
 }
 
 @media (max-width: 780px) {
@@ -64,15 +61,40 @@ div.ingredient {
 
 .header {
   font-size: 42px;
+  padding-bottom: 25px;
 }
 
 .subHeader {
   font-size: 24px;
+  padding-bottom: 10px;
+  font-weight: bold;
+  background: #000000;
+  vertical-align: middle;
+  padding: 5px;
 }
 
 .categoryHeader {
   font-size: 18px;
   display: flex;
-  padding: 15px 0;
+  background: rgba(128, 128, 128, 0.295);
+  height: 25px;
+  margin: 5px;
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+  padding: 0;
+}
+
+.number-values-Wrapper {
+  gap: 100px;
+}
+
+.number-value {
+  display: flex;
+  justify-content: space-between;
+  font-size: 16px;
   font-weight: bold;
 }
