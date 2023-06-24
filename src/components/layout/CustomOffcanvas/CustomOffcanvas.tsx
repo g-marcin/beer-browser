@@ -21,12 +21,12 @@ export const CustomOffcanvas:FC<OffcanvasProps> = ({  show, handleShow, handleCl
         <Offcanvas show={show} onHide={handleClose} {...props} placement={"end"}>
        <ReactFocusLock>
           <Offcanvas.Header closeButton>
-            <Offcanvas.Title>hamburger-menu</Offcanvas.Title>
+            <Offcanvas.Title>Menu:</Offcanvas.Title>
           </Offcanvas.Header>
           <Offcanvas.Body>
-           This is my awesome hamburger-menu where I will place dark/light mode button
-           <button className={styles.button}><Moon/></button>
-           <button className={styles.button}><Sun/></button>
+          
+           <button className={styles.button}  ><Moon size={36}/></button>
+           <button className={styles.button}><Sun size={36}/></button>
           </Offcanvas.Body>
         </ReactFocusLock>
         </Offcanvas>

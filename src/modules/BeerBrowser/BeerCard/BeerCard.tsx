@@ -11,9 +11,9 @@ type BeerCardProps = {
 };
 
 export const BeerCard: FC<BeerCardProps> = ({
-  image = 'https://picsum.photos/100/100',
-  name = 'beer name',
-  tagline = 'beer tagline',
+  image = '',
+  name = '',
+  tagline = '',
   id,
 }) => {
   const navigate = useNavigate();

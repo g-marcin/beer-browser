@@ -2,7 +2,7 @@ import { FC, useState } from 'react';
 import { Menu } from 'react-feather';
 import { Link } from 'react-router-dom';
 import beerIcon from '../../../assets/beer-icon.svg';
-import { CustomOffcanvas } from '../../CustomOffcanvas';
+import { CustomOffcanvas } from '../CustomOffcanvas';
 import styles from './header.module.css';
 
 export const Header: FC = () => {
