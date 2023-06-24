@@ -36,8 +36,12 @@
   background: #000000;
   vertical-align: middle;
   padding: 5px;
+  color: var(--subHeader-color);
 }
 
+[data-bs-theme='light'] {
+  --subHeader-color: #ffffff;
+}
 .categoryHeader {
   font-size: 18px;
   display: flex;
@@ -59,9 +63,7 @@ h3 {
 
 .number-value {
   display: flex;
-
   justify-content: space-between;
-
   font-size: 16px;
   font-weight: bold;
 }

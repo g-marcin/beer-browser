@@ -36,6 +36,7 @@
   background: #000000;
   vertical-align: middle;
   padding: 5px;
+  color: var(--subHeader-color);
 }
 
 .categoryHeader {
@@ -62,4 +63,8 @@ h3 {
   justify-content: space-between;
   font-size: 16px;
   font-weight: bold;
+}
+
+[data-bs-theme='light'] {
+  --subHeader-color: #ffffff;
 }

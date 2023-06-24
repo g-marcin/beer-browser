@@ -12,7 +12,7 @@ type CustomOffcanvasProps = {
   handleClose: () => void;
 };
 
-export const CustomOffcanvas: FC<CustomOffcanvasProps> = ({ show, handleShow, handleClose, ...props }) => {
+export const CustomOffcanvas: FC<CustomOffcanvasProps> = ({ show,  handleClose, ...props }) => {
   const { isDark, setIsDark } = useContext(ThemeContext);
 
   return (
