@@ -1,9 +1,10 @@
-import { Suspense } from 'react';
+import { Suspense, lazy } from 'react';
 import { createBrowserRouter } from 'react-router-dom';
-import { ErrorPage } from './ErrorPage';
 import { Layout, Loader } from '../components';
-import { BeerBrowser } from '../modules';
-import { BeerDetails } from '../modules/BeerDetails/BeerDetails';
+import { ErrorPage } from './ErrorPage';
+const BeerBrowser = lazy(()=> import ("../modules/BeerBrowser/BeerBrowser"))
+const BeerDetails = lazy(()=> import ("../modules/BeerDetails/BeerDetails"))
+
 
 export const AppRouter = createBrowserRouter([
   {

@@ -7,7 +7,7 @@ import { BeerInfo } from './BeerInfo';
 import { IngredientsInfo } from './IngredientsInfo';
 import styles from './beerDetails.module.css';
 
-export const BeerDetails: FC = () => {
+const BeerDetails: FC = () => {
   const { id } = useParams();
   const { beerDetails, isLoading } = useBeerDetails(id);
 
@@ -16,16 +16,18 @@ export const BeerDetails: FC = () => {
   }
 
   return (
-    <div className={`${styles.wrapper} `}>
-      {isLoading ? (
-        <Loader />
+    <>
+    {isLoading ? (
+      <Loader />
       ) : (
-        <>
+        <div className={`${styles.wrapper} `}>
           <BeerInfo beerDetails={beerDetails} />
           <Card.Img variant="top" src={beerDetails?.imageUrl} className={styles.detailsImage} />
           <IngredientsInfo beerDetails={beerDetails} />
-        </>
+        </div>
       )}
-    </div>
+      </>
   );
 };
+
+export default BeerDetails

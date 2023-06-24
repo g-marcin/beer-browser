@@ -1,6 +1,6 @@
 import { FC } from 'react';
-import styles from './customPagination.module.css';
 import Pagination from 'react-bootstrap/Pagination';
+import styles from './customPagination.module.css';
 
 type customPaginationProps = {
   page: number;
@@ -52,7 +52,7 @@ export const CustomPagination: FC<customPaginationProps> = ({ page, setPageHandl
   );
   return (
     <div className={styles.paginationWrapper}>
-      <Pagination size="lg" className="custom-pagination">
+      <Pagination size="sm" className={styles["pagination-custom"]} >
         {items}
       </Pagination>
     </div>
