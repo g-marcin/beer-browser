@@ -40,8 +40,6 @@
   margin: 0 1vw;
 }
 
-@media (max-width: 780px) {
-}
 @media (max-width: 600px) {
   .detailsImage {
     flex: none;
@@ -51,6 +49,19 @@
   }
   .cardImage {
     height: 10vh;
+  }
+
+  .image-shadow-light {
+    width: 215px;
+    height: 28px;
+    background: radial-gradient(50% 50% at 50% 50%, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 100%);
+    opacity: 0.7;
+  }
+  .image-shadow-dark {
+    width: 215px;
+    height: 28px;
+    background: radial-gradient(50% 50% at 50% 50%, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0) 100%);
+    opacity: 0.7;
   }
 }
 
@@ -97,4 +108,43 @@ h3 {
   justify-content: space-between;
   font-size: 16px;
   font-weight: bold;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.image-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.image-shadow-light {
+  width: 430px;
+  height: 56px;
+  background: radial-gradient(50% 50% at 50% 50%, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 100%);
+  opacity: 0.7;
+}
+.image-shadow-dark {
+  width: 430px;
+  height: 56px;
+  background: radial-gradient(50% 50% at 50% 50%, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0) 100%);
+  opacity: 0.7;
+}
+
+@media (max-width: 600px) {
+  .image-shadow-light {
+    width: 215px;
+    height: 28px;
+    background: radial-gradient(50% 50% at 50% 50%, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 100%);
+    opacity: 0.7;
+  }
+  .image-shadow-dark {
+    width: 215px;
+    height: 28px;
+    background: radial-gradient(50% 50% at 50% 50%, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0) 100%);
+    opacity: 0.7;
+  }
 }

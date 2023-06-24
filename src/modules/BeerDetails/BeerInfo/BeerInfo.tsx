@@ -18,11 +18,11 @@ export const BeerInfo: FC<BeerInfoProps> = ({ beerDetails }) => {
           <Card.Title>
             <h1 className={styles.header}>{beerDetails.name}</h1>
           </Card.Title>
-          <Card.Text>
+      
             <h2 className={styles.subHeader}>{beerDetails.tagline}</h2>
-          </Card.Text>
-          <Card.Text>{beerDetails?.description}</Card.Text>
-          <Card.Text className={styles['number-values-Wrapper']}>
+          
+          {beerDetails?.description}
+          <div className={styles['number-values-Wrapper']}>
             <div className={styles['number-value']}>
               <span> abv(alcohol by volume):</span>
               <span> {beerDetails?.abv} %</span>
@@ -31,7 +31,7 @@ export const BeerInfo: FC<BeerInfoProps> = ({ beerDetails }) => {
               <span>ibu(international bitter units):</span>
               <span> {beerDetails?.ibu} ibu</span>
             </div>
-          </Card.Text>
+          </div>
         </Card.Body>
       </Card>
     </Container>

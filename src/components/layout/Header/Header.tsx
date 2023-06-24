@@ -3,11 +3,11 @@ import { Menu } from 'react-feather';
 import { Link } from 'react-router-dom';
 import beerIcon from '../../../assets/beer-icon.svg';
 import { CustomOffcanvas } from '../CustomOffcanvas';
+import { SubHeader } from '../SubHeader';
 import styles from './header.module.css';
 
 export const Header: FC = () => {
   const [show, setShow] = useState(false);
-  
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
   return (
@@ -20,8 +20,9 @@ export const Header: FC = () => {
         <button className={styles.menuButton} onClick={handleShow}>
           <Menu className={styles.menu} color="#ffffff" />
         </button>
-        <CustomOffcanvas  name={"hamburger-menu"} show={show} handleClose={handleClose} handleShow={handleShow} />
       </header>
+      <SubHeader/>
+        <CustomOffcanvas name={'hamburger-menu'} show={show} handleClose={handleClose} handleShow={handleShow} />
     </>
   );
 };
