@@ -1,1 +1,1 @@
-export * from "./CustomOffcanvas";
+export * from './CustomOffcanvas';

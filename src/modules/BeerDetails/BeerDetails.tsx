@@ -8,7 +8,7 @@ import { IngredientsInfo } from './IngredientsInfo';
 import styles from './beerDetails.module.css';
 
 const BeerDetails: FC = () => {
-  const { id } = useParams();
+  const { id} = useParams();
   const { beerDetails, isLoading } = useBeerDetails(id);
 
   if (!beerDetails) {
@@ -17,17 +17,20 @@ const BeerDetails: FC = () => {
 
   return (
     <>
-    {isLoading ? (
-      <Loader />
+      {isLoading ? (
+        <Loader />
       ) : (
         <div className={`${styles.wrapper} `}>
+       <div className={styles["flex-column"]}>
           <BeerInfo beerDetails={beerDetails} />
+          
+          </div>
           <Card.Img variant="top" src={beerDetails?.imageUrl} className={styles.detailsImage} />
           <IngredientsInfo beerDetails={beerDetails} />
         </div>
       )}
-      </>
+    </>
   );
 };
 
-export default BeerDetails
+export default BeerDetails;

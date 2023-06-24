@@ -2,3 +2,14 @@
   background: none;
   text-decoration: none;
 }
+
+.menu-item {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  font-size: 18px;
+}
+
+.offcanvas {
+  width: 200px;
+}

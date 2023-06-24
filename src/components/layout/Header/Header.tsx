@@ -7,7 +7,7 @@ import styles from './header.module.css';
 
 export const Header: FC = () => {
   const [show, setShow] = useState(false);
-  
+
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
   return (
@@ -20,8 +20,8 @@ export const Header: FC = () => {
         <button className={styles.menuButton} onClick={handleShow}>
           <Menu className={styles.menu} color="#ffffff" />
         </button>
-        <CustomOffcanvas  name={"hamburger-menu"} show={show} handleClose={handleClose} handleShow={handleShow} />
       </header>
+        <CustomOffcanvas name={'hamburger-menu'} show={show} handleClose={handleClose} handleShow={handleShow} />
     </>
   );
 };

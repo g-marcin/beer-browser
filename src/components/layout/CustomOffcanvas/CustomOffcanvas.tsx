@@ -1,35 +1,43 @@
-import { FC } from "react";
-import { Offcanvas } from "react-bootstrap";
-import { Moon, Sun } from "react-feather";
-import ReactFocusLock from "react-focus-lock";
-import styles from "./customOffcanvas.module.css";
+import { FC, useContext } from 'react';
+import { Offcanvas } from 'react-bootstrap';
+import { Moon, Sun } from 'react-feather';
+import ReactFocusLock from 'react-focus-lock';
+import { ThemeContext } from '../../../contexts';
+import styles from './customOffcanvas.module.css';
 
-type OffcanvasProps = {
-    name:string
-    show:boolean
-    handleShow:()=>void
-    handleClose:()=>void
-    
-}
+type CustomOffcanvasProps = {
+  name: string;
+  show: boolean;
+  handleShow: () => void;
+  handleClose: () => void;
+};
 
+export const CustomOffcanvas: FC<CustomOffcanvasProps> = ({ show, handleShow, handleClose, ...props }) => {
+  const { isDark, setIsDark } = useContext(ThemeContext);
 
-export const CustomOffcanvas:FC<OffcanvasProps> = ({  show, handleShow, handleClose, ...props }) => {
-
-  
-    return (
-      <>
-        <Offcanvas show={show} onHide={handleClose} {...props} placement={"end"}>
-       <ReactFocusLock>
+  return (
+    <>
+        <ReactFocusLock>
+      <Offcanvas show={show} onHide={handleClose} className={styles.offcanvas} {...props} placement={'end'}>
           <Offcanvas.Header closeButton>
             <Offcanvas.Title>Menu:</Offcanvas.Title>
           </Offcanvas.Header>
           <Offcanvas.Body>
-          
-           <button className={styles.button}  ><Moon size={36}/></button>
-           <button className={styles.button}><Sun size={36}/></button>
+            <div className={styles["menu-item"]}>
+              Toggle page theme:
+               {isDark ? (
+              <button className={styles.button}>
+                <Sun size={36} onClick={() => setIsDark(isDark)} />
+              </button>
+            ) : (
+              <button className={styles.button} onClick={() => setIsDark(isDark)}>
+                <Moon size={36} />
+              </button>
+            )}
+            </div>     
           </Offcanvas.Body>
+      </Offcanvas>
         </ReactFocusLock>
-        </Offcanvas>
-      </>
-    );
-  }
+    </>
+  );
+};

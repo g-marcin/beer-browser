@@ -52,7 +52,7 @@ export const CustomPagination: FC<customPaginationProps> = ({ page, setPageHandl
   );
   return (
     <div className={styles.paginationWrapper}>
-      <Pagination size="sm" className={styles["pagination-custom"]} >
+      <Pagination size="sm" className={styles['pagination-custom']}>
         {items}
       </Pagination>
     </div>

@@ -10,12 +10,7 @@ type BeerCardProps = {
   id: number;
 };
 
-export const BeerCard: FC<BeerCardProps> = ({
-  image = '',
-  name = '',
-  tagline = '',
-  id,
-}) => {
+export const BeerCard: FC<BeerCardProps> = ({ image, name, tagline, id }) => {
   const navigate = useNavigate();
   const beerCardHandler = (id: number) => {
     navigate(`/details/${id}`);

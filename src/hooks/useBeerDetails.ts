@@ -4,7 +4,7 @@ import { httpClient } from '../common';
 import { BeerType, beerDataDTO } from '../types';
 import { beerDetailsMapper } from './beerDetailsMapper';
 
-export const useBeerDetails = (id = '1') => {
+export const useBeerDetails = (id="1") => {
   const [beerDetails, setBeerDetails] = useState<BeerType>();
   const [isLoading, setIsLoading] = useState(false);
 
