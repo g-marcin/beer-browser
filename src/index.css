@@ -51,3 +51,16 @@ button:focus-visible {
 .active > .page-link {
   background: #e6b70e;
 }
+
+.image-shadow-light {
+  width: 215px;
+  height: 28px;
+  background: radial-gradient(50% 50% at 50% 50%, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 100%);
+  opacity: 0.7;
+}
+.image-shadow-dark {
+  width: 215px;
+  height: 28px;
+  background: radial-gradient(50% 50% at 50% 50%, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0) 100%);
+  opacity: 0.7;
+}

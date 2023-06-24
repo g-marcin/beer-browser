@@ -31,7 +31,7 @@ export const CustomOffcanvas: FC<CustomOffcanvasProps> = ({ show, handleShow, ha
               </button>
             ) : (
               <button className={styles.button} onClick={() => setIsDark(isDark)}>
-                <Moon size={36} />
+                <Moon size={36} color='#000000' />
               </button>
             )}
             </div>     
