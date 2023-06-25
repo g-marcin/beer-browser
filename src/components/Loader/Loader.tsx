@@ -5,7 +5,7 @@ import styles from './loader.module.css';
 export const Loader: FC = () => {
   const [isTimeout, setIsTimeout] = useState(false);
   useEffect(() => {
-    setTimeout(() => setIsTimeout(true), 2000);
+    setTimeout(() => setIsTimeout(true), 4000);
   }, []);
 
   return (
