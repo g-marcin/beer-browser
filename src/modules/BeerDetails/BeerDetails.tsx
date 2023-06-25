@@ -13,7 +13,7 @@ const BeerDetails: FC = () => {
   const { beerDetails, isLoading } = useBeerDetails(id);
 
   if (!beerDetails) {
-    return;
+    return <Loader />;
   }
 
   return (
@@ -25,7 +25,6 @@ const BeerDetails: FC = () => {
           <BeerInfo beerDetails={beerDetails} />
           <div className={styles['image-wrapper']}>
             <AsyncImage src={beerDetails.imageUrl} alt="bottle image" className={styles.detailsImage} />
-
             <BeerShadow variant="details" />
           </div>
           <IngredientsInfo beerDetails={beerDetails} />
