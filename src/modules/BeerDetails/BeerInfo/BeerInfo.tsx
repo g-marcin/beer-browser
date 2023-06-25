@@ -21,7 +21,7 @@ export const BeerInfo: FC<BeerInfoProps> = ({ beerDetails }) => {
 
           <h2 className={styles.subHeader}>{beerDetails.tagline}</h2>
 
-          <p>{beerDetails.description}</p>
+          <p data-testid="beer-description">{beerDetails.description}</p>
           <div className={styles['number-values-Wrapper']}>
             <div className={styles['number-value']}>
               <span> abv(alcohol by volume):</span>
