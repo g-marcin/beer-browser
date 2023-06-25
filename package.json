@@ -10,7 +10,8 @@
     "preview": "vite preview",
     "format": "eslint \"**/*.{js,ts,tsx}\" --fix && npm run prettier:fix",
     "prettier:check": "prettier \"**/*.{js,ts,tsx,json,md}\" -c",
-    "prettier:fix": "prettier \"**/*.{js,ts,tsx,json,md}\" -w"
+    "prettier:fix": "prettier \"**/*.{js,ts,tsx,json,md}\" -w",
+    "test": "vitest"
   },
   "dependencies": {
     "axios": "^1.4.0",
