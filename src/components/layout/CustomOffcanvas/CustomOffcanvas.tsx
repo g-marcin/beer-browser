@@ -17,8 +17,8 @@ export const CustomOffcanvas: FC<CustomOffcanvasProps> = ({ show, handleClose, .
 
   return (
     <>
-      <ReactFocusLock>
         <Offcanvas show={show} onHide={handleClose} className={styles.offcanvas} {...props} placement={'end'}>
+      <ReactFocusLock>
           <Offcanvas.Header closeButton>
             <Offcanvas.Title>Menu:</Offcanvas.Title>
           </Offcanvas.Header>
@@ -36,8 +36,8 @@ export const CustomOffcanvas: FC<CustomOffcanvasProps> = ({ show, handleClose, .
               )}
             </div>
           </Offcanvas.Body>
-        </Offcanvas>
       </ReactFocusLock>
+        </Offcanvas>
     </>
   );
 };
