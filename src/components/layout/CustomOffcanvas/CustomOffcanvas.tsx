@@ -8,7 +8,6 @@ import styles from './customOffcanvas.module.css';
 type CustomOffcanvasProps = {
   name: string;
   show: boolean;
-  handleShow: () => void;
   handleClose: () => void;
 };
 
