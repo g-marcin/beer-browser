@@ -22,7 +22,7 @@ export const Header: FC = () => {
         </button>
       </header>
       <SubHeader />
-      <CustomOffcanvas name={'hamburger-menu'} show={show} handleClose={handleClose} handleShow={handleShow} />
+      <CustomOffcanvas name={'hamburger-menu'} show={show} handleClose={handleClose} />
     </>
   );
 };

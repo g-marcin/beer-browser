@@ -5,15 +5,25 @@ import { BeerType, beerDataDTO } from '../types';
 import { beerDetailsMapper } from './beerDetailsMapper';
 
 export const useBeerDetails = (id: string | undefined) => {
-  const [beerDetails, setBeerDetails] = useState<BeerType>();
+  const [beerDetails, setBeerDetails] = useState<BeerType>({
+    id: 0,
+    name: '',
+    tagline: '',
+    description: '',
+    abv: 0,
+    ibu: 0,
+    ingredients: {
+      malt: [],
+      hops: [],
+      yeast: '',
+    },
+    imageUrl: '',
+  });
   const [isLoading, setIsLoading] = useState(false);
   useEffect(() => {
-    if (!id) {
-      return;
-    }
     setIsLoading(true);
     httpClient
-      .get(`/beers?ids=${id}`)
+      .get(`/beers?ids=${id || ''}`)
       .then((response: AxiosResponse<beerDataDTO[]>) => {
         if (response.data) {
           setBeerDetails(beerDetailsMapper(response.data));

@@ -12,24 +12,14 @@ export const SubHeader: FC = () => {
 
   return (
     <nav className={`${styles.nav} text-decoration-none`}>
-      {
-        <NavLink to="/" className={`${styles.homeCrumb} text-decoration-none`}>
-          Home
+      <NavLink to="/" className={`${styles.homeCrumb} text-decoration-none`}>
+        Home
+      </NavLink>
+
+      {id && (
+        <NavLink to={`/details/${id}`} className={`${styles.authorCrumb} text-decoration-none`}>
+          {!isLoading && `> ${beerDetails.name}`}
         </NavLink>
-      }
-      {isLoading ? (
-        ''
-      ) : (
-        <>
-          {id ? (
-            <NavLink to={`/details/${id}`} className={`${styles.authorCrumb} text-decoration-none`}>
-              {'> '}
-              {beerDetails.name}
-            </NavLink>
-          ) : (
-            ''
-          )}
-        </>
       )}
     </nav>
   );

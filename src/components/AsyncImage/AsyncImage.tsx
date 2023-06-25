@@ -9,6 +9,7 @@ type AsyncImageProps = {
 
 export const AsyncImage: FC<AsyncImageProps> = ({ src, alt, className }) => {
   const [loadedSrc, setLoadedSrc] = useState<string | null>(null);
+
   useEffect(() => {
     setLoadedSrc(null);
     if (src) {
@@ -18,13 +19,16 @@ export const AsyncImage: FC<AsyncImageProps> = ({ src, alt, className }) => {
       const image = new Image();
       image.addEventListener('load', handleLoad);
       image.src = src;
+
       return () => {
         image.removeEventListener('load', handleLoad);
       };
     }
   }, [src]);
+
   if (loadedSrc === src) {
     return <img src={src} alt={alt} className={className} />;
   }
+
   return <Loader />;
 };
