@@ -10,7 +10,7 @@ import { beerDataMapper } from './beerDataMapper';
 
 const BeerBrowser: FC = () => {
   const [isLoading, setIsLoading] = useState(false);
-  const [page, setPage] = useState(1);
+  const [page, setPage] = useState<number | undefined>();
   const setPageHandler = (page: number) => {
     setPage(page);
   };
@@ -19,7 +19,7 @@ const BeerBrowser: FC = () => {
   useEffect(() => {
     setIsLoading(true);
     httpClient
-      .get(`/beers?page=${page}&per_page=9`)
+      .get(`/beers?page=${page || 1}&per_page=9`)
       .then((response: AxiosResponse<beerDataDTO[]>) => {
         setBeerData(beerDataMapper(response.data));
       })
@@ -37,10 +37,19 @@ const BeerBrowser: FC = () => {
         <div>
           <Container className={styles.beerCardsContainer}>
             {beerData?.map((beer) => {
-              return <BeerCard name={beer.name} tagline={beer.tagline} image={beer.imageUrl} id={beer.id} key={beer.id} />;
+              return (
+                <BeerCard
+                  name={beer.name}
+                  tagline={beer.tagline}
+                  image={beer.imageUrl}
+                  id={beer.id}
+                  key={beer.id}
+                  isLoading={isLoading}
+                />
+              );
             })}
           </Container>
-          <CustomPagination page={page} setPageHandler={setPageHandler} />
+          <CustomPagination page={page || 1} setPageHandler={setPageHandler} />
         </div>
       )}
     </>
