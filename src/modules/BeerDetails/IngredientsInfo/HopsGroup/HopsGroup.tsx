@@ -23,7 +23,7 @@ export const HopsGroup: FC<HopsGroupProps> = ({ title, hops }) => {
           );
         })
       ) : (
-        <div>No{title} hops</div>
+        <div>No {title} hops</div>
       )}
     </>
   );
