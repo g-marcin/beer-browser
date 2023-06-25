@@ -1,7 +1,7 @@
 import { FC, useMemo } from 'react';
 import { Card, Container } from 'react-bootstrap';
 import { BeerType } from '../../../types';
-import { HopsGroup } from './Hops';
+import { HopsGroup } from './HopsGroup';
 import styles from './ingredientsInfo.module.css';
 
 type IngredientsInfoProps = {
@@ -9,6 +9,7 @@ type IngredientsInfoProps = {
 };
 
 export const IngredientsInfo: FC<IngredientsInfoProps> = ({ beerDetails }) => {
+  
   const hopsStart = useMemo(() => {
     return beerDetails?.ingredients.hops.filter((hop) => hop.add === 'start') || [];
   }, [beerDetails]);
@@ -30,7 +31,6 @@ export const IngredientsInfo: FC<IngredientsInfoProps> = ({ beerDetails }) => {
           <Card.Title>
             <h1 className={styles.header}>Ingredients:</h1>
           </Card.Title>
-
           <h2 className={styles.subHeader}>Malts:</h2>
           {beerDetails?.ingredients.malt.map((malt, index) => {
             return (
@@ -42,12 +42,10 @@ export const IngredientsInfo: FC<IngredientsInfoProps> = ({ beerDetails }) => {
               </div>
             );
           })}
-
           <h2 className={styles.subHeader}>Hops:</h2>
           <HopsGroup title={'--Start'} hops={hopsStart} />
           <HopsGroup title={'--Middle'} hops={hopsMiddle} />
           <HopsGroup title={'--End'} hops={hopsEnd} />
-
           <h2 className={styles.subHeader}>Yeast:</h2>
           <div className={styles.ingredient}>{beerDetails?.ingredients.yeast}</div>
         </Card.Body>

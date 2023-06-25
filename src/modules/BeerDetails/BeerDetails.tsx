@@ -10,27 +10,21 @@ import styles from './beerDetails.module.css';
 
 const BeerDetails: FC = () => {
   const { id } = useParams();
-  const { beerDetails, isLoading } = useBeerDetails(id);
+  const { beerDetails} = useBeerDetails(id);
 
   if (!beerDetails) {
     return <Loader />;
   }
 
   return (
-    <>
-      {isLoading ? (
-        <Loader />
-      ) : (
         <div className={`${styles.wrapper} `}>
           <BeerInfo beerDetails={beerDetails} />
           <div className={styles['image-wrapper']}>
-            <AsyncImage src={beerDetails.imageUrl} alt="bottle image" className={styles.detailsImage} />
+            <AsyncImage src={beerDetails.imageUrl} alt="beer-image" className={styles.detailsImage} />
             <BeerShadow variant="details" />
           </div>
           <IngredientsInfo beerDetails={beerDetails} />
-        </div>
-      )}
-    </>
+        </div>  
   );
 };
 
