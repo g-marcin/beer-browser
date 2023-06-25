@@ -9,7 +9,6 @@ type IngredientsInfoProps = {
 };
 
 export const IngredientsInfo: FC<IngredientsInfoProps> = ({ beerDetails }) => {
-  
   const hopsStart = useMemo(() => {
     return beerDetails?.ingredients.hops.filter((hop) => hop.add === 'start') || [];
   }, [beerDetails]);
