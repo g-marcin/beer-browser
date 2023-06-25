@@ -15,6 +15,7 @@ export const CustomPagination: FC<customPaginationProps> = ({ page, setPageHandl
       <Pagination.Item
         onClick={() => {
           setPageHandler(number + 1);
+          window.scrollTo(0, 0);
         }}
         key={number + 1}
         active={number + 1 === page}
@@ -31,6 +32,7 @@ export const CustomPagination: FC<customPaginationProps> = ({ page, setPageHandl
           return;
         }
         setPageHandler(page - 1);
+        window.scrollTo(0, 0);
       }}
       key={'previous'}
     >
@@ -44,6 +46,7 @@ export const CustomPagination: FC<customPaginationProps> = ({ page, setPageHandl
           return;
         }
         setPageHandler(page + 1);
+        window.scrollTo(0, 0);
       }}
       key={'next'}
     >

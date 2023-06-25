@@ -12,14 +12,14 @@ export const HopsGroup: FC<HopsGroupProps> = ({ title, hops }) => {
     <>
       <h3 className={styles.categoryHeader}>{title}</h3>
       {hops.length !== 0 ? (
-        hops.map((hop: HopType,index) => {
-          return (       
-              <div className={styles.ingredient} key={index}>
-                <div>{hop.name}</div>
-                <div>
-                  {hop.amount.value} {hop.amount.unit}
-                </div>
+        hops.map((hop: HopType, index) => {
+          return (
+            <div className={styles.ingredient} key={index}>
+              <div>{hop.name}</div>
+              <div>
+                {hop.amount.value} {hop.amount.unit}
               </div>
+            </div>
           );
         })
       ) : (

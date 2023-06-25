@@ -18,9 +18,9 @@ export const BeerInfo: FC<BeerInfoProps> = ({ beerDetails }) => {
           <Card.Title>
             <h1 className={styles.header}>{beerDetails.name}</h1>
           </Card.Title>
-      
-            <h2 className={styles.subHeader}>{beerDetails.tagline}</h2>
-          
+
+          <h2 className={styles.subHeader}>{beerDetails.tagline}</h2>
+
           {beerDetails?.description}
           <div className={styles['number-values-Wrapper']}>
             <div className={styles['number-value']}>

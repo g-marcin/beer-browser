@@ -30,25 +30,24 @@ export const IngredientsInfo: FC<IngredientsInfoProps> = ({ beerDetails }) => {
           <Card.Title>
             <h1 className={styles.header}>Ingredients:</h1>
           </Card.Title>
-         
-            <h2 className={styles.subHeader}>Malts:</h2>
-            {beerDetails?.ingredients.malt.map((malt, index) => {
-              return (
-                <div className={styles.ingredient} key={index}>
-                  <div>{malt.name}</div>
-                  <div>
-                    {malt.amount.value} {malt.amount.unit}
-                  </div>
+
+          <h2 className={styles.subHeader}>Malts:</h2>
+          {beerDetails?.ingredients.malt.map((malt, index) => {
+            return (
+              <div className={styles.ingredient} key={index}>
+                <div>{malt.name}</div>
+                <div>
+                  {malt.amount.value} {malt.amount.unit}
                 </div>
-              );
-            })}
-         
-        
-            <h2 className={styles.subHeader}>Hops:</h2>
-            <HopsGroup title={'--Start'} hops={hopsStart} />
-            <HopsGroup title={'--Middle'} hops={hopsMiddle} />
-            <HopsGroup title={'--End'} hops={hopsEnd} />
-      
+              </div>
+            );
+          })}
+
+          <h2 className={styles.subHeader}>Hops:</h2>
+          <HopsGroup title={'--Start'} hops={hopsStart} />
+          <HopsGroup title={'--Middle'} hops={hopsMiddle} />
+          <HopsGroup title={'--End'} hops={hopsEnd} />
+
           <h2 className={styles.subHeader}>Yeast:</h2>
           <div className={styles.ingredient}>{beerDetails?.ingredients.yeast}</div>
         </Card.Body>

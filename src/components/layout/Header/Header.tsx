@@ -21,8 +21,8 @@ export const Header: FC = () => {
           <Menu className={styles.menu} color="#ffffff" />
         </button>
       </header>
-      <SubHeader/>
-        <CustomOffcanvas name={'hamburger-menu'} show={show} handleClose={handleClose} handleShow={handleShow} />
+      <SubHeader />
+      <CustomOffcanvas name={'hamburger-menu'} show={show} handleClose={handleClose} handleShow={handleShow} />
     </>
   );
 };

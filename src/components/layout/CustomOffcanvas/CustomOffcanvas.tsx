@@ -12,32 +12,32 @@ type CustomOffcanvasProps = {
   handleClose: () => void;
 };
 
-export const CustomOffcanvas: FC<CustomOffcanvasProps> = ({ show, handleShow, handleClose, ...props }) => {
+export const CustomOffcanvas: FC<CustomOffcanvasProps> = ({ show, handleClose, ...props }) => {
   const { isDark, setIsDark } = useContext(ThemeContext);
 
   return (
     <>
-        <ReactFocusLock>
-      <Offcanvas show={show} onHide={handleClose} className={styles.offcanvas} {...props} placement={'end'}>
+      <ReactFocusLock>
+        <Offcanvas show={show} onHide={handleClose} className={styles.offcanvas} {...props} placement={'end'}>
           <Offcanvas.Header closeButton>
             <Offcanvas.Title>Menu:</Offcanvas.Title>
           </Offcanvas.Header>
           <Offcanvas.Body>
-            <div className={styles["menu-item"]}>
+            <div className={styles['menu-item']}>
               Toggle page theme:
-               {isDark ? (
-              <button className={styles.button}>
-                <Sun size={36} onClick={() => setIsDark(isDark)} />
-              </button>
-            ) : (
-              <button className={styles.button} onClick={() => setIsDark(isDark)}>
-                <Moon size={36} color='#000000' />
-              </button>
-            )}
-            </div>     
+              {isDark ? (
+                <button className={styles.button}>
+                  <Sun size={36} onClick={() => setIsDark(isDark)} />
+                </button>
+              ) : (
+                <button className={styles.button} onClick={() => setIsDark(isDark)}>
+                  <Moon size={36} color="#000000" />
+                </button>
+              )}
+            </div>
           </Offcanvas.Body>
-      </Offcanvas>
-        </ReactFocusLock>
+        </Offcanvas>
+      </ReactFocusLock>
     </>
   );
 };
