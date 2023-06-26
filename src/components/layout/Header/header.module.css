@@ -42,7 +42,7 @@
   cursor: pointer;
   transition: border-color 0.25s;
   color: #ffffff;
-  border: 1px solid #ffffff;
+
   margin: 2px;
 }
 .menuButton:hover {
