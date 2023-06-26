@@ -9,12 +9,14 @@ https://api.punkapi.com/v2/
 <ul>
 <li>page layout</li>
 <li>data fetched from api</li>
+<li>data mapped to convenient shape</li>
 <li>data displayed into cards</li>
 <li>data is paginated</li>
 <li>beer details on separate dynamic route /details/:id </li>
+<li>specific beer details fetched by useBeerDetails custom hook</li>
 <li>beer details displayed in engaging way</li>
 <li>slider menu with focus-lock</li>
-<li>dark/light theme </li>
+<li>dark/light theme, saved in local-storage, passed by context </li>
 <li>sub-menu with breadcrumbs navigation </li>
 <li>added styles to beer cards and beer images  </li>
 <li>data-loading is communicated to user with loader(spinner)  </li>
