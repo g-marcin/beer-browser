@@ -18,7 +18,7 @@ https://api.punkapi.com/v2/
 <li>sub-menu with breadcrumbs navigation </li>
 <li>added styles to beer cards and beer images  </li>
 <li>data-loading is communicated to user with loader(spinner)  </li>
-
+<li>app is compatible with desktop/tablet/mobile screens </li>
 </ul>
 
 ## locally:
@@ -55,12 +55,11 @@ https://api.punkapi.com/v2/
 
 <code>
 
-        "happy-dom": "^9.20.3",
         "@testing-library/react": "^14.0.0",
         "@types/react": "^18.0.37",
         "@types/react-dom": "^18.0.11",
-        "@typescript-eslint/eslint-plugin": "^5.59.0",
-        "@typescript-eslint/parser": "^5.59.0",
+        "@typescript-eslint/eslint-plugin": "^5.60.0",
+        "@typescript-eslint/parser": "^5.60.0",
         "@vitejs/plugin-react-swc": "^3.0.0",
         "eslint": "^8.38.0",
         "eslint-config-prettier": "^8.8.0",
@@ -69,7 +68,8 @@ https://api.punkapi.com/v2/
         "eslint-plugin-jsx-a11y": "^6.7.1",
         "eslint-plugin-react": "^7.32.2",
         "eslint-plugin-react-hooks": "^4.6.0",
-        "eslint-plugin-react-refresh": "^0.3.4",
+        "eslint-plugin-react-refresh": "^0.4.1",
+        "happy-dom": "^9.20.3",
         "typescript": "^5.0.2",
         "vite": "^4.3.9",
         "vitest": "^0.32.2"
