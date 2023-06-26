@@ -5,20 +5,7 @@ import { BeerType, beerDataDTO } from '../types';
 import { beerDetailsMapper } from './beerDetailsMapper';
 
 export const useBeerDetails = (id: string | undefined) => {
-  const [beerDetails, setBeerDetails] = useState<BeerType>({
-    id: 0,
-    name: '',
-    tagline: '',
-    description: '',
-    abv: 0,
-    ibu: 0,
-    ingredients: {
-      malt: [],
-      hops: [],
-      yeast: '',
-    },
-    imageUrl: '',
-  });
+  const [beerDetails, setBeerDetails] = useState<BeerType>();
   const [isLoading, setIsLoading] = useState(false);
   useEffect(() => {
     setIsLoading(true);
@@ -28,7 +15,7 @@ export const useBeerDetails = (id: string | undefined) => {
         if (response.data) {
           setBeerDetails(beerDetailsMapper(response.data));
         } else {
-          throw new Error('no details data recieved');
+          throw new Error('no details data received');
         }
       })
       .then(() => setIsLoading(false))
