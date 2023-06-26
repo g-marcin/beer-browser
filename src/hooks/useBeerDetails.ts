@@ -15,7 +15,7 @@ export const useBeerDetails = (id: string | undefined) => {
         if (response.data) {
           setBeerDetails(beerDetailsMapper(response.data));
         } else {
-          throw new Error('no details data recieved');
+          throw new Error('no details data received');
         }
       })
       .then(() => setIsLoading(false))
