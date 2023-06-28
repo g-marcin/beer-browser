@@ -4,6 +4,7 @@ import { Layout, Loader } from '../components';
 import { ErrorPage } from './ErrorPage';
 const BeerBrowser = lazy(() => import('../modules/BeerBrowser/BeerBrowser'));
 const BeerDetails = lazy(() => import('../modules/BeerDetails/BeerDetails'));
+const RandomBeerDetails = lazy(() => import('../modules/BeerDetails/RandomBeerDetails'));
 
 export const AppRouter = createBrowserRouter([
   {
@@ -16,6 +17,14 @@ export const AppRouter = createBrowserRouter([
         element: (
           <Suspense fallback={<Loader />}>
             <BeerBrowser />
+          </Suspense>
+        ),
+      },
+      {
+        path: '/details/random',
+        element: (
+          <Suspense fallback={<Loader />}>
+            <RandomBeerDetails />
           </Suspense>
         ),
       },

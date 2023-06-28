@@ -2,6 +2,13 @@
   background: none;
   text-decoration: none;
   border: none;
+  color: var(--icon-color);
+}
+[data-bs-theme='dark'] {
+  --icon-color: #ffffff;
+}
+[data-bs-theme='light'] {
+  --icon-color: #000000;
 }
 
 .menu-item {

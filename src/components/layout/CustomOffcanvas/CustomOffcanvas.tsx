@@ -1,6 +1,7 @@
 import { FC, useContext } from 'react';
+import { Link } from 'react-router-dom';
 import { Offcanvas } from 'react-bootstrap';
-import { Moon, Sun } from 'react-feather';
+import { Moon, Shuffle, Star, Sun } from 'react-feather';
 import ReactFocusLock from 'react-focus-lock';
 import { ThemeContext } from '../../../contexts';
 import styles from './customOffcanvas.module.css';
@@ -33,6 +34,12 @@ export const CustomOffcanvas: FC<CustomOffcanvasProps> = ({ show, handleClose, .
                   <Moon size={36} color="#000000" />
                 </button>
               )}
+            </div>
+            <div className={styles['menu-item']}>
+              Random beer:
+              <Link to="/details/random" className={styles.button}>
+                <Shuffle size={36} />
+              </Link>
             </div>
           </Offcanvas.Body>
         </ReactFocusLock>
