@@ -7,9 +7,6 @@ export const SubHeader: FC = () => {
   const { id } = useParams();
   const location = useLocation();
   const { beerDetails, isLoading } = useBeerDetails(id);
-  if (!beerDetails) {
-    return;
-  }
 
   return (
     <nav className={`${styles.nav} text-decoration-none`}>
@@ -19,11 +16,17 @@ export const SubHeader: FC = () => {
 
       {id && (
         <NavLink to={`/details/${id}`} className={`${styles.authorCrumb} text-decoration-none`}>
-          {!isLoading && `> ${beerDetails.name}`}
+          {!isLoading && `> ${beerDetails?.name || ''}`}
         </NavLink>
       )}
       {location.pathname === '/details/random' && (
-        <NavLink to={`/details/random`} className={`${styles.authorCrumb} text-decoration-none`}>
+        <NavLink
+          to={`/details/random`}
+          className={`${styles.authorCrumb} text-decoration-none`}
+          onClick={() => {
+            window.location.reload();
+          }}
+        >
           {`> Random Beer`}
         </NavLink>
       )}

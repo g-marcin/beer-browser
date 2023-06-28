@@ -1,4 +1,5 @@
 import { FC, useContext } from 'react';
+import { useLocation, useNavigate } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import { Offcanvas } from 'react-bootstrap';
 import { Moon, Shuffle, Star, Sun } from 'react-feather';
@@ -14,6 +15,8 @@ type CustomOffcanvasProps = {
 
 export const CustomOffcanvas: FC<CustomOffcanvasProps> = ({ show, handleClose, ...props }) => {
   const { isDark, setIsDark } = useContext(ThemeContext);
+  const location = useLocation();
+  const navigate = useNavigate();
 
   return (
     <>
@@ -37,7 +40,15 @@ export const CustomOffcanvas: FC<CustomOffcanvasProps> = ({ show, handleClose, .
             </div>
             <div className={styles['menu-item']}>
               Random beer:
-              <Link to="/details/random" className={styles.button}>
+              <Link
+                to="/details/random"
+                className={styles.button}
+                onClick={() => {
+                  if (location.pathname === '/details/random') {
+                    window.location.reload();
+                  }
+                }}
+              >
                 <Shuffle size={36} />
               </Link>
             </div>
