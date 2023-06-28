@@ -1,7 +1,7 @@
 import { AxiosResponse } from 'axios';
 import { useEffect, useState } from 'react';
 import { httpClient } from '../common';
-import { BeerType, beerDataDTO } from '../types';
+import { BeerType, BeerDataDTO } from '../types';
 import { beerDetailsMapper } from './beerDetailsMapper';
 
 export const useBeerDetails = (id: string | undefined) => {
@@ -11,7 +11,7 @@ export const useBeerDetails = (id: string | undefined) => {
     setIsLoading(true);
     httpClient
       .get(`/beers?ids=${id || ''}`)
-      .then((response: AxiosResponse<beerDataDTO[]>) => {
+      .then((response: AxiosResponse<BeerDataDTO[]>) => {
         if (response.data) {
           setBeerDetails(beerDetailsMapper(response.data));
         } else {

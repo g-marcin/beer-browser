@@ -1,5 +1,5 @@
 import { render } from '@testing-library/react';
-import { expect, test } from 'vitest';
+import { expect, test, assert } from 'vitest';
 import { mockBeer } from '../mocks';
 import { BeerInfo } from '../modules/BeerDetails/BeerInfo';
 
@@ -9,9 +9,8 @@ test('vitest environment works', () => {
 
 test('beer description renders', async () => {
   const beerDetails = mockBeer;
-  if (!beerDetails) {
-    return;
-  }
+  assert(beerDetails, 'no beer details object');
+
   const beerInfo = render(<BeerInfo beerDetails={beerDetails} />);
   const beerDescription = await beerInfo.findByTestId('beer-description');
   expect(beerDescription).toBeDefined();

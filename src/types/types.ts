@@ -1,4 +1,4 @@
-export type beerDataDTO = {
+export type BeerDataDTO = {
   id: number;
   name: string;
   tagline: string;
