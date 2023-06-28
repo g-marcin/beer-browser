@@ -19,8 +19,8 @@ export const useBeerDetails = (id: string | undefined) => {
         }
       })
       .then(() => setIsLoading(false))
-      .catch(() => {
-        return;
+      .catch((error: Error) => {
+        console.log(error);
       });
   }, [id]);
   return { beerDetails: beerDetails, isLoading: isLoading };

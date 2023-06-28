@@ -24,8 +24,8 @@ const BeerBrowser: FC = () => {
         setBeerData(beerDataMapper(response.data));
       })
       .then(() => setIsLoading(false))
-      .catch(() => {
-        return;
+      .catch((error: Error) => {
+        console.log(error);
       });
   }, [page]);
 
