@@ -1,7 +1,6 @@
 import { FC } from 'react';
 import { Card } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
-import { Loader } from '../../../components';
 import { AsyncImage } from '../../../components/AsyncImage';
 import { BeerShadow } from '../../../components/BeerShadow';
 import styles from './beerCard.module.css';
@@ -11,10 +10,9 @@ type BeerCardProps = {
   name: string;
   tagline: string;
   id: number;
-  isLoading: boolean;
 };
 
-export const BeerCard: FC<BeerCardProps> = ({ image, name, tagline, id, isLoading }) => {
+export const BeerCard: FC<BeerCardProps> = ({ image, name, tagline, id }) => {
   const navigate = useNavigate();
   const beerCardHandler = (id: number) => {
     navigate(`/details/${id}`);
@@ -22,14 +20,8 @@ export const BeerCard: FC<BeerCardProps> = ({ image, name, tagline, id, isLoadin
   return (
     <Card className={styles.beerCard} onClick={() => beerCardHandler(id)}>
       <div className={styles['image-wrapper']}>
-        {isLoading ? (
-          <Loader />
-        ) : (
-          <>
-            <AsyncImage src={image} alt="bottle image" className={styles.cardImage} />
-            <BeerShadow variant="card" />
-          </>
-        )}
+        <AsyncImage src={image} alt="bottle image" className={styles.cardImage} />
+        <BeerShadow variant="card" />
       </div>
 
       <Card.Body className={styles.cardBody}>
