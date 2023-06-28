@@ -23,7 +23,6 @@ export const BeerCard: FC<BeerCardProps> = ({ image, name, tagline, id }) => {
         <AsyncImage src={image} alt="bottle image" className={styles.cardImage} />
         <BeerShadow variant="card" />
       </div>
-
       <Card.Body className={styles.cardBody}>
         <Card.Title>{name}</Card.Title>
         <Card.Text>{tagline}</Card.Text>

@@ -46,7 +46,7 @@ export const IngredientsInfo: FC<IngredientsInfoProps> = ({ beerDetails }) => {
           <HopsGroup title={'--Middle'} hops={hopsMiddle} />
           <HopsGroup title={'--End'} hops={hopsEnd} />
           <h2 className={styles.subHeader}>Yeast:</h2>
-          <div className={styles.ingredient}>{beerDetails?.ingredients.yeast}</div>
+          <div className={styles.ingredient}>{beerDetails.ingredients.yeast}</div>
         </Card.Body>
       </Card>
     </Container>

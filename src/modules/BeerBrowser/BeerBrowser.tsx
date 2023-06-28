@@ -9,7 +9,6 @@ import { beerDataMapper } from './beerDataMapper';
 import styles from './beerBrowser.module.css';
 
 const BeerBrowser: FC = () => {
-  const [isLoading, setIsLoading] = useState(false);
   const [page, setPage] = useState<number | undefined>();
   const setPageHandler = (page: number) => {
     setPage(page);
@@ -28,6 +27,7 @@ const BeerBrowser: FC = () => {
         console.log(error);
       });
   }, [page]);
+  const [isLoading, setIsLoading] = useState(false);
 
   return (
     <>

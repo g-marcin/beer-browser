@@ -9,7 +9,7 @@ type BeerInfoProps = {
 
 export const BeerInfo: FC<BeerInfoProps> = ({ beerDetails }) => {
   if (!beerDetails) {
-    return;
+    throw new Error('no beer details');
   }
   return (
     <Container className={styles.detailsContainer}>
@@ -18,9 +18,7 @@ export const BeerInfo: FC<BeerInfoProps> = ({ beerDetails }) => {
           <Card.Title>
             <h1 className={styles.header}>{beerDetails.name}</h1>
           </Card.Title>
-
           <h2 className={styles.subHeader}>{beerDetails.tagline}</h2>
-
           <p data-testid="beer-description">{beerDetails.description}</p>
           <div className={styles['number-values-Wrapper']}>
             <div className={styles['number-value']}>
