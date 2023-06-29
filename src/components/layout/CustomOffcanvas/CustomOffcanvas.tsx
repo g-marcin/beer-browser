@@ -52,6 +52,19 @@ export const CustomOffcanvas: FC<CustomOffcanvasProps> = ({ show, handleClose, .
                 <Shuffle size={36} />
               </Link>
             </div>
+            <div className={styles['menu-item']}>
+              Favorite beers:
+              <button
+                className={styles.button}
+                onClick={() => {
+                  if (location.pathname === '/details/random') {
+                    window.location.reload();
+                  }
+                }}
+              >
+                <Star size={36} />
+              </button>
+            </div>
           </Offcanvas.Body>
         </ReactFocusLock>
       </Offcanvas>
