@@ -1,8 +1,7 @@
 import { FC } from 'react';
 import { Card } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
-import { AsyncImage } from '../../../components/AsyncImage';
-import { BeerShadow } from '../../../components/BeerShadow';
+import { AsyncImage, BeerShadow } from '..';
 import styles from './beerCard.module.css';
 
 type BeerCardProps = {

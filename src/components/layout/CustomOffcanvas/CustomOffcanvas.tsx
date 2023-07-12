@@ -1,9 +1,8 @@
 import { FC, useContext } from 'react';
-import { useLocation, useNavigate } from 'react-router-dom';
-import { Link } from 'react-router-dom';
 import { Offcanvas } from 'react-bootstrap';
 import { Moon, Shuffle, Star, Sun } from 'react-feather';
 import ReactFocusLock from 'react-focus-lock';
+import { Link, useLocation } from 'react-router-dom';
 import { ThemeContext } from '../../../contexts';
 import styles from './customOffcanvas.module.css';
 
@@ -16,7 +15,7 @@ type CustomOffcanvasProps = {
 export const CustomOffcanvas: FC<CustomOffcanvasProps> = ({ show, handleClose, ...props }) => {
   const { isDark, setIsDark } = useContext(ThemeContext);
   const location = useLocation();
-  const navigate = useNavigate();
+
 
   return (
     <>

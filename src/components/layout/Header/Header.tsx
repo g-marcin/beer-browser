@@ -7,7 +7,7 @@ import { SubHeader } from '../SubHeader';
 import styles from './header.module.css';
 
 export const Header: FC = () => {
-  const [show, setShow] = useState(false);
+  const [show, setShow] = useState(true);
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
   return (

@@ -1,0 +1,8 @@
+.beerCardsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 95vw;
+  gap: 50px;
+  padding: 50px;
+}
