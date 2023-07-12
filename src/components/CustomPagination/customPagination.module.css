@@ -1,6 +1,6 @@
 .paginationWrapper {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
 }
 .page-link.active,
 .active > .page-link {
