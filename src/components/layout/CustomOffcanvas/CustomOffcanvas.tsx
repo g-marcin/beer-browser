@@ -1,5 +1,5 @@
 import { FC, useContext } from 'react';
-import { Offcanvas } from 'react-bootstrap';
+import { Button, Offcanvas } from 'react-bootstrap';
 import { Moon, Shuffle, Star, Sun } from 'react-feather';
 import ReactFocusLock from 'react-focus-lock';
 import { Link, useLocation } from 'react-router-dom';
@@ -24,46 +24,46 @@ export const CustomOffcanvas: FC<CustomOffcanvasProps> = ({ show, handleClose, .
           <Offcanvas.Header closeButton>
             <Offcanvas.Title>Menu:</Offcanvas.Title>
           </Offcanvas.Header>
-          <Offcanvas.Body>
-            <div className={styles['menu-item']}>
-              Toggle page theme:
-              {isDark ? (
-                <button className={styles.button}>
-                  <Sun size={36} onClick={() => setIsDark(isDark)} />
-                </button>
+          <Offcanvas.Body className={styles['offcanvas-body']}>
+           
+            <Button className={styles['menu-item']}  onClick={() =>{ setIsDark(isDark);  }}>
+              <span className={styles['item-typography']}>  Page theme:</span>
+              {isDark ? (     
+                  <Sun size={36} className={styles.icon} />            
               ) : (
-                <button className={styles.button} onClick={() => setIsDark(isDark)}>
-                  <Moon size={36} color="#000000" />
-                </button>
+                  <Moon size={36} className={styles.icon} />
               )}
-            </div>
-            <div className={styles['menu-item']}>
-              Random beer:
+            </Button>
+           
+            
               <Link
                 to="/details/random"
-                className={styles.button}
+                className={styles['menu-item']}
                 onClick={() => {
                   if (location.pathname === '/details/random') {
                     window.location.reload();
                   }
+                  handleClose()
                 }}
               >
-                <Shuffle size={36} />
+                <span className={styles['item-typography']}>Random beer:</span>
+                <Shuffle size={36} className={styles.icon} />
               </Link>
-            </div>
-            <div className={styles['menu-item']}>
-              Favorite beers:
-              <button
-                className={styles.button}
+              <Link
+                to="/details/random"
+                className={styles['menu-item']}
                 onClick={() => {
                   if (location.pathname === '/details/random') {
                     window.location.reload();
                   }
+                   handleClose()
                 }}
               >
-                <Star size={36} />
-              </button>
-            </div>
+                <span className={styles['item-typography']}>Favorites:</span>
+                <Star size={36}className={styles.icon}/>
+              </Link>
+            
+         
           </Offcanvas.Body>
         </ReactFocusLock>
       </Offcanvas>
